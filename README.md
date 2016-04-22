@@ -23,11 +23,23 @@ You can configure some settings
 * Open the PDF after Compile
 * Open the log after Error
 * Set the LaTeX compiler to be used (pdflatex, xelatex, lualatex)
+* Set a main document to always be the compilation target
 ```
 //Latex Compile Configuration
 	"latexCompile.openAfterCompile": true,
 	"latexCompile.openLogAfterError": true,
-	"latexCompile.compiler": "xelatex",
+	"latexCompile.compiler": "xelatex"
+```
+
+### Main Document Configuration ###
+A few notes...
+* This only works if you have a folder opened
+* While you technically can set it globally, this should probably be set with workspace options
+```
+.vscode/settings.json:
+{
+	"latexCompile.mainFile": "myDoc.tex"
+}
 ```
 
 ## Contributing
@@ -52,7 +64,7 @@ LaTex Distribution: ... <br />
         
 ## Change Log
 
-### Version 0.1.x
+### Version 0.1.0
 * Initial commit
 * Included path in message
 * Added Contribution guide to README.md
@@ -74,8 +86,13 @@ Thanks to https://github.com/rashwell
 
 ### Version 0.4.0
 This version happened thanks to a community contribution.
-Thanks to https://github.com/caffinatedangel
+Thanks to https://github.com/caffeinatedangel
 * Added compiler option
+
+### Version 0.5.0
+This version happened thanks to a community contribution.
+Thanks to https://github.com/caffeinatedangel
+* Allows setting of a main document
 
         
 ## License
